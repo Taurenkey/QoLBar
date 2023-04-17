@@ -9,10 +9,15 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
         <NoWarn>CA1416</NoWarn>
+		<DalamudDevPlugins>$(appdata)\XIVLauncher\devPlugins\QoLBar\</DalamudDevPlugins>
         <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     </PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+		<OutputPath>$(DalamudDevPlugins)</OutputPath>
+	</PropertyGroup>
+	
     <PropertyGroup>
         <DalamudLibPath>$(AppData)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
     </PropertyGroup>
